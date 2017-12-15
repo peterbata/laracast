@@ -5,7 +5,7 @@ $task = [
     'title' => 'Groceries',
     'due'   => 'today',
     'assigned_to' => 'Peter',
-    'completed' => true
+    'completed' => false
 ];
 
 

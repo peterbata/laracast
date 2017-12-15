@@ -1,3 +1,3 @@
-#Laracast PHP Tutorial
+#Laracast PHP Practitioner
 
 Author: Jeffrey Way
