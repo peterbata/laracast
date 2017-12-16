@@ -1,9 +1,12 @@
 <?php
-    
+
+
 require 'functions.php';
 
-$age = ['twenty one', 'twenty five', 'thirty five'];
+$age = (5);
 
-dd($age);
+legalAge($age);
 
-require 'index.vue.php';
+
+
+require 'index.view.php';
