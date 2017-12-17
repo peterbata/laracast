@@ -1,14 +1,10 @@
 <?php
 
-function legalAge($age) {
-
-	$newage = ($age < 16) ? 'child' : 'adult';
-
-	//
+function dd($data) {
 
  	echo '<pre>';
 	
-	 	die(var_dump($newage));
+	 	die(var_dump($data));
 
 	echo '</pre>';
 
