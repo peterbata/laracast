@@ -1,60 +1,17 @@
 <?php
 
-// require 'functions.php';
 
-class Task {
+require 'functions.php';
 
-		public $description;
+require 'Task.php';
 
-		public $completed = false;
+$pdo = connectToDb();
 
-		public function __construct($description)
+$statement = $pdo->prepare('select * from todos');
 
-		{
+$statement->execute();
 
-				$this->description = $description;
-
-		}
-
-		public function complete()
-
-		{
-
-				$this->completed = true;
-
-		}
-
-		public function isComplete()
-
-		{
-
-			return $this->completed;
-
-		}
-
-}
-
-
-$tasks = [
-
-		new Task('Go to the store'),
-		new Task('Finish my screencast'),
-		new Task('Clean my room')
-
-];
-
-$tasks[0]->complete();
-
-
-//dd($tasks);
-
-
-// require 'functions.php';
-
-// $age = (99);
-
-// legalAge($age);
-
+$tasks = $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
 
 
 require 'index.view.php';
